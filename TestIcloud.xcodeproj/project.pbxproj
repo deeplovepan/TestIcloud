@@ -22,15 +22,16 @@
 		A69FFE071535C26B00E41C12 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A69FFE091535C26B00E41C12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A69FFE0B1535C26B00E41C12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A69FFE0F1535C26B00E41C12 /* TestIcloud-Info.plist */ = {isa = PBXFileReference; path = "TestIcloud-Info.plist"; sourceTree = "<group>"; };
+		A69FFE0F1535C26B00E41C12 /* TestIcloud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestIcloud-Info.plist"; sourceTree = "<group>"; };
 		A69FFE111535C26B00E41C12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A69FFE131535C26B00E41C12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A69FFE151535C26B00E41C12 /* TestIcloud-Prefix.pch */ = {isa = PBXFileReference; path = "TestIcloud-Prefix.pch"; sourceTree = "<group>"; };
-		A69FFE161535C26B00E41C12 /* TestIcloudAppDelegate.h */ = {isa = PBXFileReference; path = TestIcloudAppDelegate.h; sourceTree = "<group>"; };
+		A69FFE151535C26B00E41C12 /* TestIcloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestIcloud-Prefix.pch"; sourceTree = "<group>"; };
+		A69FFE161535C26B00E41C12 /* TestIcloudAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestIcloudAppDelegate.h; sourceTree = "<group>"; };
 		A69FFE171535C26B00E41C12 /* TestIcloudAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIcloudAppDelegate.m; sourceTree = "<group>"; };
 		A69FFE1A1535C26B00E41C12 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A69FFE1C1535C26B00E41C12 /* TestIcloudViewController.h */ = {isa = PBXFileReference; path = TestIcloudViewController.h; sourceTree = "<group>"; };
+		A69FFE1C1535C26B00E41C12 /* TestIcloudViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestIcloudViewController.h; sourceTree = "<group>"; };
 		A69FFE1D1535C26B00E41C12 /* TestIcloudViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIcloudViewController.m; sourceTree = "<group>"; };
+		A69FFE241535C37900E41C12 /* TestIcloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestIcloud.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		A69FFE0D1535C26B00E41C12 /* TestIcloud */ = {
 			isa = PBXGroup;
 			children = (
+				A69FFE241535C37900E41C12 /* TestIcloud.entitlements */,
 				A69FFE161535C26B00E41C12 /* TestIcloudAppDelegate.h */,
 				A69FFE171535C26B00E41C12 /* TestIcloudAppDelegate.m */,
 				A69FFE191535C26B00E41C12 /* MainStoryboard.storyboard */,
@@ -237,10 +239,13 @@
 		A69FFE221535C26B00E41C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestIcloud/TestIcloud.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 世穎 Andy (64Y52ZB6W6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestIcloud/TestIcloud-Prefix.pch";
 				INFOPLIST_FILE = "TestIcloud/TestIcloud-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "458F0BDD-8A92-4539-8AB9-CA2376BD3ABF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -248,6 +253,7 @@
 		A69FFE231535C26B00E41C12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TestIcloud/TestIcloud.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestIcloud/TestIcloud-Prefix.pch";
 				INFOPLIST_FILE = "TestIcloud/TestIcloud-Info.plist";

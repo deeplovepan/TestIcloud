@@ -14,6 +14,28 @@
 
 @implementation TestIcloudViewController
 
++(void)getDataFromIcloud
+{
+    NSUbiquitousKeyValueStore *icloudStore = [NSUbiquitousKeyValueStore defaultStore];
+    
+    if([icloudStore stringForKey:@"name"])
+    {
+        
+    }
+}
+
++(void)setNameFromIcloud
+{
+    NSUbiquitousKeyValueStore *icloudStore = [NSUbiquitousKeyValueStore defaultStore];
+
+    [icloudStore setString:@"peter" forKey:@"name"];
+    if([icloudStore synchronize])
+    {
+        
+    }
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
